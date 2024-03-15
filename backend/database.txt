@@ -1,0 +1,23 @@
+mysql> describe task;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| userid   | char(12)     | YES  |     | NULL    |       |
+| taskdesc | varchar(500) | YES  |     | NULL    |       |
+| deadline | char(10)     | YES  |     | NULL    |       |
+| status   | int          | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> describe usercred
+    -> ;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| userid   | char(12)     | YES  |     | NULL    |       |
+| password | varchar(500) | YES  |     | NULL    |       |
+| name     | varchar(30)  | YES  |     | NULL    |       |
+| email    | varchar(50)  | YES  |     | NULL    |       |
+| dept     | varchar(30)  | YES  |     | NULL    |       |
+| batch    | char(4)      | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
