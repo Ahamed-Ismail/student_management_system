@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 var con = null;
 try {
     con = mysql.createPool({
-        host: "studenttaskmanagement.cu4aa78nopao.us-east-1.rds.amazonaws.com",
+        host:"localhost",
         port: 3306,
         database: "task_db",
         user: "root",
@@ -161,6 +161,18 @@ const deletetask = async (req, res) => {
     }
 }
 
+const addattendence = async (req, res) => {
+    try {
+        const userid = req.body.scannedData;
+        con.query('delete from task where userid=? and taskdesc=? and status=?', [userid, taskdesc, status]);
+        res.json({ msg: "Task deleted successfully", res: 'ok' });
+    }
+    catch (err) {
+        console.log(err);
+        console.log("error occured at deletetask");
+        res.json({ msg: "error occured at deletetask", res: "no" });
+    }
+}
 
 
 module.exports={gettask, addtask, getprofile,finishtask, getalltask,deletetask}

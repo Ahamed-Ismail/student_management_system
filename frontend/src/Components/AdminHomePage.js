@@ -134,6 +134,7 @@ function AdminHomePage() {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
+            <li><button className="btn btn-secondary" onClick={()=>navigate('/qrread')}>Attendence</button></li>
             <li>
               <button className="btn btn-secondary" onClick={handlelogout}>
                 Logout

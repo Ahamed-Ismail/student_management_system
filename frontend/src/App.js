@@ -5,6 +5,8 @@ import HomePage from './Components/HomePage';
 import UserLoginPage from './Components/UserLoginPage';
 import AdminHomePage from './Components/AdminHomePage';
 import UserHomePage from './Components/UserHomePage';
+import Qrread from './Components/Qrread';
+import Qrcode from './Components/Qrcode';
 
 
 function App() {
@@ -18,7 +20,11 @@ function App() {
 
       <Route path='/adminhomepage' element={<AdminHomePage />} />
       
-      <Route path='/userhomepage' element={<UserHomePage />}/>
+      <Route path='/userhomepage' element={<UserHomePage />} />
+      
+      <Route path='/qrcode' element={<Qrcode />} />
+
+      <Route path='/qrread' element={<Qrread />} />
       
       
     </Routes>

@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 var con = null;
 try {
     con = mysql.createPool({
-        host: "studenttaskmanagement.cu4aa78nopao.us-east-1.rds.amazonaws.com",
+        host:"localhost",
         port: 3306,
         database: "task_db",
         user: "root",
